@@ -10,9 +10,9 @@ pub fn navbar() -> Html {
         r#"
         display: flex;
         justify-content: flex-start;
-        gap: 5rem;
+        gap: 1rem;
         margin-top: 1.25rem;
-        margin-left: 2rem;
+        margin-left: 10rem;
         font-family: 'CascadiaCodePL';
 
         .inner {
