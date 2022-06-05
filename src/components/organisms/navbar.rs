@@ -13,6 +13,7 @@ pub fn navbar() -> Html {
         gap: 5rem;
         margin-top: 1.25rem;
         margin-left: 2rem;
+        font-family: 'CascadiaCodePL';
 
         .inner {
             display: flex;
