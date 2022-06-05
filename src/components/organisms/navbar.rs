@@ -1,15 +1,18 @@
 use yew::prelude::*;
-use yew_router::prelude::*;
 use stylist::{yew::styled_component, style};
 
 use crate::router::Route;
+use crate::components::{molecules::navbar_items::NavbarItems, atoms::navbar_logo::NavbarLogo};
 
 #[styled_component(Navbar)]
 pub fn navbar() -> Html {
     let stylesheet = style!(
         r#"
-        display: grid;
-        place-items: center;
+        display: flex;
+        justify-content: flex-start;
+        gap: 5rem;
+        margin-top: 1.25rem;
+        margin-left: 2rem;
 
         .inner {
             display: flex;
@@ -22,12 +25,13 @@ pub fn navbar() -> Html {
         <header>
             <nav>
                 <div class={stylesheet}>
+                    <NavbarLogo route={Route::Home} label={"PC Rep Workshop"}/>
                     <span class="inner">
-                        <Link<Route> to={Route::Home}>{"Home"}</Link<Route>>
-                        <Link<Route> to={Route::About}>{"About"}</Link<Route>>
+                        <NavbarItems/>
                     </span>
                 </div>
             </nav>
+            <hr style="width:100%" size="1" color="white" />
         </header>
     }
 }

@@ -6,7 +6,12 @@
         {
             "label": "Run Dev",
             "type": "shell",
-            "command": "trunk serve"
+            "command": "trunk serve",
+            "problemMatcher": [
+                "$rustc",
+                "$rustc-json",
+                "$rustc-watch"
+            ]
         }
     ]
 }
