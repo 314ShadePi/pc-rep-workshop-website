@@ -4,6 +4,8 @@ mod components;
 use yew::prelude::*;
 use yew_router::prelude::*;
 use stylist::{yew::styled_component, style};
+use components::organisms::navbar::Navbar;
+
 use crate::router::{Route, switch};
 
 #[styled_component(App)]
@@ -12,26 +14,15 @@ pub fn app() -> Html {
         r#"
         display: grid;
         place-items: center;
-        
-        h1 {
-            color: aqua;
-        }
-        
-        p {
-            color: green;
-        }
-        
-        li {
-            color: red;
-        }
         "#
     ).unwrap();
 
     html! {
-        <div class={stylesheet}>
-            <BrowserRouter>
+        <BrowserRouter>
+            <Navbar />
+            <div class={stylesheet}>
                 <Switch<Route> render={Switch::render(switch)} />
-            </BrowserRouter>
-        </div>
+            </div>
+        </BrowserRouter>
     }
 }
