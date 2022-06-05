@@ -10,18 +10,6 @@ pub fn home() -> Html {
         r#"
         display: grid;
         place-items: center;
-        
-        h1 {
-            color: aqua;
-        }
-        
-        p {
-            color: green;
-        }
-        
-        li {
-            color: red;
-        }
         "#
     ).unwrap();
     html! {

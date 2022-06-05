@@ -10,18 +10,6 @@ pub fn about() -> Html {
         r#"
         display: grid;
         place-items: center;
-        
-        h1 {
-            color: aqua;
-        }
-        
-        p {
-            color: green;
-        }
-        
-        li {
-            color: red;
-        }
         "#
     ).unwrap();
     let history = use_history().unwrap();
