@@ -4,7 +4,7 @@ mod components;
 use yew::prelude::*;
 use yew_router::prelude::*;
 use stylist::{yew::styled_component, style};
-use components::organisms::{navbar::Navbar, footer::Footer};
+use components::organisms::{header::Header, footer::Footer};
 
 use crate::router::{Route, switch};
 
@@ -19,7 +19,7 @@ pub fn app() -> Html {
 
     html! {
         <BrowserRouter>
-            <Navbar />
+            <Header />
             <div class={stylesheet}>
                 <Switch<Route> render={Switch::render(switch)} />
             </div>

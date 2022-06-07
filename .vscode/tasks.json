@@ -6,7 +6,7 @@
         {
             "label": "Run Dev",
             "type": "shell",
-            "command": "trunk serve",
+            "command": "trunk serve --address=0.0.0.0",
             "problemMatcher": [
                 "$rustc",
                 "$rustc-json",

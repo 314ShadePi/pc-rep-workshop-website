@@ -7,7 +7,7 @@ pub fn footer() -> Html {
         r#"
         position: fixed;
         bottom: 0;
-        width: 99%;
+        width: 100%;
 
         .inner {
             display: flex;
