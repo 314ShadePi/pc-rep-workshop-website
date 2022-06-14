@@ -1,3 +1,4 @@
+mod stores;
 mod router;
 mod components;
 
