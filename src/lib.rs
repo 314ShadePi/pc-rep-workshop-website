@@ -1,7 +1,6 @@
 mod stores;
 mod router;
 mod components;
-
 use yew::prelude::*;
 use yew_router::prelude::*;
 use stylist::{yew::styled_component, style};

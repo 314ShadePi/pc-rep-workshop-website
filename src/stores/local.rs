@@ -2,13 +2,11 @@ use serde::{Serialize, Deserialize};
 use yewdux::prelude::*;
 
 #[derive(Clone, Default, Serialize, Deserialize)]
-pub struct LocalState {
-    pub username: String,
-    pub fav_lang: String,
+pub struct LocalStore {
     pub count: u32,
 }
 
-impl Persistent for LocalState {
+impl Persistent for LocalStore {
     fn area() -> Area {
         Area::Local
     }

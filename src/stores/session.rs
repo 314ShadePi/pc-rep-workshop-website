@@ -2,13 +2,11 @@ use serde::{Serialize, Deserialize};
 use yewdux::prelude::*;
 
 #[derive(Clone, Default, Serialize, Deserialize)]
-pub struct SessionState {
-    pub username: String,
-    pub fav_lang: String,
+pub struct SessionStore {
     pub count: u32,
 }
 
-impl Persistent for SessionState {
+impl Persistent for SessionStore {
     fn area() -> Area {
         Area::Session
     }
