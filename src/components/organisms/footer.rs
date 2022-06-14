@@ -21,12 +21,16 @@ pub fn footer() -> Html {
         #line {
             width: 100%;
         }
+
+        .footer-text-container {
+            margin-bottom: 1.1rem;
+        }
         "#
     ).unwrap();
     html! {
         <footer class={stylesheet}>
             <hr id="line" size="1" color="white" />
-            <div>
+            <div class="footer-text-container">
                 <span class="inner">
                     <p>{"© 2022 - 314ShadePi - PC Rep Workshop"}</p>
                 </span>
