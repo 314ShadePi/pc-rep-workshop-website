@@ -1,0 +1,1 @@
+sudo cp /home/cccxivshadepi/pc-rep-workshop-website/dist/* /var/www/html/ -r
