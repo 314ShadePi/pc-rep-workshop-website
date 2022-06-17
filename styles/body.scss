@@ -1,0 +1,12 @@
+html, body {
+	color: white;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+body .main-container {
+    display: grid;
+    place-items: center;
+}
+
+@import "./pages/about.scss";
+@import "./pages/home.scss";

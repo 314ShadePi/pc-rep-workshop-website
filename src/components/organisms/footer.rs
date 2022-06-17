@@ -1,34 +1,9 @@
 use yew::prelude::*;
-use stylist::{yew::styled_component, style};
 
-#[styled_component(Footer)]
+#[function_component(Footer)]
 pub fn footer() -> Html {
-    let stylesheet = style!(
-        r#"
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-
-        .inner {
-            display: flex;
-            justify-content: center;
-            gap: 5rem;
-            margin-top: 1.25rem;
-            margin-left: 2rem;
-            font-family: 'CascadiaCodePL';
-        }
-
-        #line {
-            width: 100%;
-        }
-
-        .footer-text-container {
-            margin-bottom: 1.1rem;
-        }
-        "#
-    ).unwrap();
     html! {
-        <footer class={stylesheet}>
+        <footer>
             <hr id="line" size="1" color="white" />
             <div class="footer-text-container">
                 <span class="inner">

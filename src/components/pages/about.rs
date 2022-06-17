@@ -1,23 +1,16 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
-use stylist::{yew::styled_component, style};
 use yewdux::prelude::*;
 use yewdux_functional::*;
 
 use crate::{router::Route, stores::{local::LocalStore, session::SessionStore}};
 
-#[styled_component(About)]
+#[function_component(About)]
 pub fn about() -> Html {
     let local_store = use_store::<PersistentStore<LocalStore>>();
     let local_count = local_store.state().map(|s| s.count).unwrap_or_default();
     let session_store = use_store::<PersistentStore<SessionStore>>();
     let session_count = session_store.state().map(|s| s.count).unwrap_or_default();
-    let stylesheet = style!(
-        r#"
-        display: grid;
-        place-items: center;
-        "#
-    ).unwrap();
     let history = use_history().unwrap();
     let onclick = {
         let history = history.clone();
@@ -29,7 +22,7 @@ pub fn about() -> Html {
     };
 
     html! {
-        <div class={stylesheet}>
+        <div class="page-about">
             <h1>{"About"}</h1>
             <p>{"Welcome to the about page"}</p>
             <button {onclick}>{"Home"}</button>
