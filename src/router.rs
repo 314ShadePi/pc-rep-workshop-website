@@ -22,7 +22,7 @@ pub fn switch(route: &Route) -> Html {
             <about::About />
         },
         Route::NotFound => html! {
-            <div>
+            <div class="page-404">
                 <h1>{"404"}</h1>
                 <p>{"Page not found"}</p>
             </div>
