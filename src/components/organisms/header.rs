@@ -7,7 +7,7 @@ pub fn header() -> Html {
     html! {
         <header>
             <Navbar/>
-            <hr style="width:100%" size="1" color="white" />
+            <hr id="header-line" />
         </header>
     }
 }

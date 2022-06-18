@@ -4,7 +4,7 @@ use yew::prelude::*;
 pub fn footer() -> Html {
     html! {
         <footer>
-            <hr id="line" size="1" color="white" />
+            <hr id="footer-line" />
             <div class="footer-text-container">
                 <span class="inner">
                     <p>{"© 2022 - 314ShadePi"}</p>
