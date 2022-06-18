@@ -7,7 +7,7 @@ pub fn footer() -> Html {
             <hr id="line" size="1" color="white" />
             <div class="footer-text-container">
                 <span class="inner">
-                    <p>{"© 2022 - 314ShadePi - PC Rep Workshop"}</p>
+                    <p>{"© 2022 - 314ShadePi"}</p>
                 </span>
             </div>
         </footer>

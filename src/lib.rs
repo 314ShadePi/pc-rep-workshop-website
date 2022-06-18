@@ -3,7 +3,7 @@ mod router;
 mod components;
 use yew::prelude::*;
 use yew_router::prelude::*;
-use components::organisms::{header::Header, footer::Footer};
+use components::{organisms::header::Header, atoms::footer::Footer};
 
 use crate::router::{Route, switch};
 
