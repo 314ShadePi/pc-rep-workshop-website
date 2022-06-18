@@ -10,7 +10,7 @@ pub fn navbar() -> Html {
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="logo">
-                    <NavbarLogo route={Route::Home} label={"PC Rep Workshop"}/>
+                    <NavbarLogo route={Route::Home} label={"314ShadePi"}/>
                 </div>
                 <input type="checkbox" id="nav-check" />
                 <label for="nav-check" class="nav-toggler">
