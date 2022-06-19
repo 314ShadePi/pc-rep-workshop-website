@@ -11,6 +11,10 @@ pub fn home() -> Html {
     let increment_local = local_store.dispatch().reduce_callback(|s| s.count += 1);
     let decrement_local = local_store.dispatch().reduce_callback(|s| s.count -= 1);
     let session_store = use_store::<PersistentStore<SessionStore>>();
+    // TODO: Implement callback to set active page in session store
+    // FIXME: When running the following two lines, the website in unable to load. Find another way to set active page.
+    /*let on_load_set_active_page = session_store.dispatch().reduce_callback_with(|s, v: Route| s.page = v);
+    on_load_set_active_page.emit(Route::Home);*/
     let increment_session = session_store.dispatch().reduce_callback(|s| s.count += 1);
     let decrement_session = session_store.dispatch().reduce_callback(|s| s.count -= 1);
     html! {

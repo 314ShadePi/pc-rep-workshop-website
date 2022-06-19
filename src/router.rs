@@ -1,8 +1,9 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
+use serde::{Serialize, Deserialize};
 use crate::components::pages::*;
 
-#[derive(Clone, Routable, PartialEq)]
+#[derive(Clone, Routable, PartialEq, Serialize, Deserialize)]
 pub enum Route {
     #[at("/")]
     Home,
