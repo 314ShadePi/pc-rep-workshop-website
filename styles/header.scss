@@ -13,103 +13,120 @@ header {
 	padding-bottom: $padding-bottom;
 	position: relative;
 	font-family: 'CascadiaCodePL';
-}
-header *{
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	#header-line {
+		width: $line-width;
+		height: $line-height;
+		position: absolute;
+		top: $line-position-top;
+	}
+
+	#nav-check {
+		position: absolute;
+		opacity:0;
+		pointer-events: none;
+	}
+
+	.container {
+		max-width: 1170px;
+		margin: auto;
+	}
+
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.align-items-center {
+		align-items: center;
+	}
+
+	.justify-content-between {
+		justify-content: space-between;
+	}
+
+	.logo a {
+		font-size: 30px;
+		color: $white;
+		text-transform: capitalize;
+	}
+
+	.logo, .nav {
+		padding:0 15px;
+	}
+
+	.nav {
+		ul li {
+			display: inline-block;
+			margin-left: 40px;
+
+			a {
+				display: block;
+				font-size: 16px;
+				padding:10px 0;
+				color: rgba(255,255,255,0.7);
+				text-transform: capitalize;
+				transition: all 0.5s ease;
+
+				&:hover, &.active {
+					color: $white;
+				}
+			}
+		}
+	}
+
+	.nav-toggler {
+		height: 34px;
+		width: 44px;
+		background-color: $white;
+		border-radius: 4px;
+		cursor: pointer;
+		display: none;
+		align-items: center;
+		justify-content: center;
+		margin-right: 15px;
+
+		span {
+			display: block;
+			height: 2px;
+			width: 20px;
+			background-color: $body-background-color;
+			position: relative;
+
+			&:before, &:after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: $body-background-color;
+				left:0;
+			}
+
+			&:before {
+				top: -6px;
+			}
+
+			&:after {
+				top: 6px;
+			}
+		}
+	}
 }
 
-header #header-line {
-	width: $line-width;
-	height: $line-height;
-	position: absolute;
-	top: $line-position-top;
-}
-
-header a{
-	text-decoration: none;
-}
-header ul{
-	list-style: none;
-}
-header .container{
-	max-width: 1170px;
-	margin: auto;
-}
-header .row{
-	display: flex;
-	flex-wrap: wrap;
-}
-header .align-items-center{
-	align-items: center;
-}
-header .justify-content-between{
-	justify-content: space-between;
-}
-header .logo,
-header .nav{
-	padding:0 15px;
-}
-header .logo a{
-	font-size: 30px;
-	color: $white;
-	text-transform: capitalize;
-}
-header .nav ul li{
-	display: inline-block;
-	margin-left: 40px;
-}
-header .nav ul li a{
-	display: block;
-	font-size: 16px;
-	padding:10px 0;
-	color: rgba(255,255,255,0.7);
-	text-transform: capitalize;
-	transition: all 0.5s ease;
-}
-header .nav ul li a:hover,
-header .nav ul li a.active{
-	color: $white;
-}
-header #nav-check{
-	position: absolute;
-	opacity:0;
-	pointer-events: none;
-}
-header .nav-toggler{
-	height: 34px;
-	width: 44px;
-	background-color: $white;
-	border-radius: 4px;
-	cursor: pointer;
-	display: none;
-	align-items: center;
-	justify-content: center;
-	margin-right: 15px;
-}
-header .nav-toggler span{
-	display: block;
-	height: 2px;
-	width: 20px;
-	background-color: $body-background-color;
-	position: relative;
-}
-header .nav-toggler span::before,
-header .nav-toggler span::after{
-   content: '';
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   background-color: $body-background-color;
-   left:0;
-}
-header .nav-toggler span::before{
-	top: -6px;
-}
-header .nav-toggler span::after{
-	top: 6px;
-}
 @media(max-width: 991px){
     header .nav-toggler{
     	display: flex;
@@ -124,13 +141,13 @@ header .nav-toggler span::after{
     	opacity:0;
     	visibility: hidden;
     }
-    header .nav ul li{
+    header .nav ul li {
     	display: block;
     	margin:0;
     }
     header #nav-check:checked ~ .nav{
-       opacity: 1;
-       visibility: visible;
+    	opacity: 1;
+        visibility: visible;
     }
     header #nav-check:focus ~ .nav-toggler{
     	box-shadow: 0 0 15px #000000;
