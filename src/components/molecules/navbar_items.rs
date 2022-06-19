@@ -7,8 +7,8 @@ use crate::components::atoms::navbar_item::NavbarItem;
 pub fn navbar_items() -> Html {
     html! {
         <ul>
-            <li><NavbarItem route={Route::Home} label={"Home"}/></li>
-            <li><NavbarItem route={Route::About} label={"About"}/></li>
+            <li><NavbarItem route={Route::Home} label={"Home"} class_name="home-link" /></li>
+            <li><NavbarItem route={Route::About} label={"About"} class_name="about-link" /></li>
         </ul>
     }
 }
