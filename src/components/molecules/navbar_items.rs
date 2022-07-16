@@ -9,6 +9,7 @@ pub fn navbar_items() -> Html {
         <ul>
             <li><NavbarItem route={Route::Home} label={"Home"} class_name="home-link" /></li>
             <li><NavbarItem route={Route::About} label={"About"} class_name="about-link" /></li>
+            <li><NavbarItem route={Route::Games} label={"Games"} class_name="games-link" /></li>
         </ul>
     }
 }

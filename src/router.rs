@@ -9,6 +9,8 @@ pub enum Route {
     Home,
     #[at("/about")]
     About,
+    #[at("/games")]
+    Games,
     #[not_found]
     #[at("/404")]
     NotFound,
@@ -21,6 +23,9 @@ pub fn switch(route: &Route) -> Html {
         },
         Route::About => html! {
             <about::About />
+        },
+        Route::Games => html! {
+            <games::page::Games />
         },
         Route::NotFound => html! {
             <div class="page-404">

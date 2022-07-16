@@ -1,4 +1,4 @@
-use web_sys::Document;
+//use web_sys::Document;
 use yew::prelude::*;
 use yew_router::prelude::*;
 use yewdux::prelude::*;
@@ -26,8 +26,8 @@ pub fn home() -> Html {
     let increment_session = session_store.dispatch().reduce_callback(|s| s.count += 1);
     let decrement_session = session_store.dispatch().reduce_callback(|s| s.count -= 1);
     html! {
-        <div class="page-home">
-            <h1>{"Home"}</h1>
+        <div class="page page-home">
+            <h1 class="title">{"Home"}</h1>
             <p>{"Welcome to the home page"}</p>
             <Link<Route> to={Route::About}>{"About"}</Link<Route>>
             <button onclick={increment_local}>{"Increment Local"}</button>

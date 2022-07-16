@@ -22,8 +22,8 @@ pub fn about() -> Html {
     };
 
     html! {
-        <div class="page-about">
-            <h1>{"About"}</h1>
+        <div class="page page-about">
+            <h1 class="title">{"About"}</h1>
             <p>{"Welcome to the about page"}</p>
             <button {onclick}>{"Home"}</button>
             <br />
